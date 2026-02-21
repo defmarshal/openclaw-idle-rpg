@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@800;900&family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --kawaii-pink: #ff1493;
+  --kawaii-purple: #6a0dad;
+  --kawaii-blue: #0097ff;
+  --kawaii-mint: #00c853;
+  --kawaii-yellow: #ffc107;
+  --kawaii-orange: #ff6f00;
+}
+
+body {
+  @apply bg-white text-gray-900 font-['Quicksand'];
+  min-height: 100vh;
+}
+
+/* Kawaii card style - fully opaque */
+.kawaii-card {
+  @apply bg-white border-2 border-pink-500 rounded-3xl shadow-lg p-4;
+}
+
+/* Kawaii button */
+.kawaii-btn {
+  @apply px-4 py-2 rounded-full font-bold text-white shadow-lg transition-all duration-200;
+  background: linear-gradient(135deg, var(--kawaii-pink), var(--kawaii-purple));
+}
+.kawaii-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(200, 162, 230, 0.5);
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Floating hearts background */
+.bg-hearts {
+  background-image: radial-gradient(var(--kawaii-pink) 2px, transparent 2px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+}
+
+/* Cute progress bar */
+.kawaii-progress {
+  @apply h-3 rounded-full bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300;
+  overflow: hidden;
+}
+.kawaii-progress-fill {
+  @apply h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-500;
+}
+
+/* Glow effect for abilities */
+.ability-ready {
+  box-shadow: 0 0 15px var(--kawaii-pink), 0 0 30px var(--kawaii-purple);
+}
+
+/* Rounded headings */
+h1, h2, h3 {
+  @apply font-['Press_Start_2P'] text-purple-600;
+  text-shadow: 2px 2px 0 var(--kawaii-pink);
+}

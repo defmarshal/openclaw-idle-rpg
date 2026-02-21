@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+.next/
+out/
+build/
+
+# Misc
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel
+
+# IDE
+.vscode/
+.idea/
+
+# Testing
+coverage/
+
+# Local storage saves (if any)
+*.save.json
